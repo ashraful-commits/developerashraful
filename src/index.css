@@ -46,7 +46,7 @@
 html {
   font-family: sans-serif;
   line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
+
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -10217,7 +10217,7 @@ h6,
 }
 
 .navbar-light {
-  display: none;
+  transition: all 0.5s;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -10363,14 +10363,15 @@ h6,
   transition: 0.5s;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .portfolio-item:hover .portfolio-btn {
   opacity: 1;
-  width: calc(100% - 60px);
-  height: calc(100% - 60px);
-  top: 30px;
-  left: 30px;
+  width: calc(100%);
+  height: calc(100%);
+  top: 0px;
+  left: 0px;
 }
 .portfolio-item:hover .portfolio-btn .link {
   color: white;

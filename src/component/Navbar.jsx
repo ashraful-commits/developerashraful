@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const Navbar = () => {
+  const navbar = useRef();
+
+  const navbarShow = () => {
+    if (window.scrollY > 0) {
+      navbar.current.style.opacity = 1; // Hide the navbar
+    } else {
+      navbar.current.style.opacity = 0; // Show the navbar
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", navbarShow);
+    return () => {
+      window.removeEventListener("scroll", navbarShow);
+    };
+  }, [scroll]);
   return (
     <>
       {/* <!-- Navbar Start --> */}
-      <nav className="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+      <nav
+        ref={navbar}
+        className="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5"
+      >
         <a href="/" className="navbar-brand ml-lg-3">
           <h1 className="m-0 display-5">
-            <span className="text-primary">Programmer</span>Ashraful
+            <span className="text-primary">Developer</span>Ashraful
           </h1>
         </a>
         <button

@@ -109,7 +109,7 @@ const PortFolio = () => {
                       <LazyLoadImage
                         className="img-fluid rounded w-100"
                         alt={item.title}
-                        src={item.img} // use normal <img> attributes as props
+                        src={item.img} // use normal  attributes as props
                       />
                       <div className="portfolio-btn bg-primary d-flex align-items-center justify-content-center ">
                         <p className="title">{item.title}</p>
