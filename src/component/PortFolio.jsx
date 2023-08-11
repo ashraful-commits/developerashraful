@@ -35,7 +35,13 @@ const PortFolio = () => {
       filter: "Porfolio",
       title: "My Portfolio",
       live: "https://developerashraful.netlify.app/",
-      tools: ["React js", "Custom css", "Email.js", "Bootstrap"],
+      tools: [
+        "React js",
+        "Custom css",
+        "Email.js",
+        "Bootstrap",
+        "react-lazy-load-image-component",
+      ],
       img: "/img/Myportfolio2.png",
     },
   ];
