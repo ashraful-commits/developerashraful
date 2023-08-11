@@ -46,7 +46,7 @@ const About = () => {
                 <div className="col-sm-6 py-2">
                   <h6>
                     Birthday:{" "}
-                    <span className="text-secondary">7 March 1990</span>
+                    <span className="text-secondary">7 March 1996</span>
                   </h6>
                 </div>
                 <div className="col-sm-6 py-2">
