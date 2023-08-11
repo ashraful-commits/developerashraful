@@ -19,7 +19,7 @@ const PortFolio = () => {
         "react-player",
         "sass",
       ],
-      img: "/public/img/Movix.png",
+      img: "/img/Movix.png",
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const PortFolio = () => {
       title: "My Portfolio",
       live: "https://programmerashraful.netlify.app/",
       tools: ["Next js", "Tailwind css"],
-      img: "/public/img/Myportfolio.png",
+      img: "/img/Myportfolio.png",
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const PortFolio = () => {
       title: "My Portfolio",
       live: "https://developerashraful.netlify.app/",
       tools: ["Next js", "Tailwind css"],
-      img: "/public/img/Myportfolio2.png",
+      img: "/img/Myportfolio2.png",
     },
   ];
   const filterButton = [
