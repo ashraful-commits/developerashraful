@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const PortFolio = () => {
   const [selectedFilter, setSelectedFilter] = useState("All");
@@ -34,7 +35,7 @@ const PortFolio = () => {
       filter: "Porfolio",
       title: "My Portfolio",
       live: "https://developerashraful.netlify.app/",
-      tools: ["Next js", "Tailwind css"],
+      tools: ["React js", "Custom css", "Email.js", "Bootstrap"],
       img: "/img/Myportfolio2.png",
     },
   ];
@@ -99,18 +100,28 @@ const PortFolio = () => {
                     className="col-lg-4 col-md-6 mb-4 portfolio-item first"
                   >
                     <div className="position-relative overflow-hidden mb-2">
-                      <img
+                      <LazyLoadImage
                         className="img-fluid rounded w-100"
-                        src={item.img}
-                        alt=""
+                        alt={item.title}
+                        src={item.img} // use normal <img> attributes as props
                       />
-                      <div className="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                      <div className="portfolio-btn bg-primary d-flex align-items-center justify-content-center ">
+                        <p className="title">{item.title}</p>
                         <a href={item.img} data-lightbox="portfolio">
                           <i
                             className="fa fa-plus text-white"
-                            style={{ fontSize: "60px" }}
+                            style={{ fontSize: "25px" }}
                           ></i>
                         </a>
+                        <a target="blank" className="link" href={item.live}>
+                          Live
+                        </a>
+                        <div className="tools">
+                          <h5>Tools:</h5>
+                          {item.tools.map((item, index) => {
+                            return <span key={index}>{item}, </span>;
+                          })}
+                        </div>
                       </div>
                     </div>
                   </div>

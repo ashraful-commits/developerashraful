@@ -1,3 +1,7 @@
+import {
+  LazyLoadComponent,
+  LazyLoadImage,
+} from "react-lazy-load-image-component";
 import Typewriter from "typewriter-effect";
 
 const Hero = () => {
@@ -47,10 +51,10 @@ const Hero = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-              <img
+              <LazyLoadImage
                 className="profile-fluid w-100 w-min-100 rounded-circle shadow-md"
+                alt={"profile"}
                 src="img/profile.jpg"
-                alt=""
               />
             </div>
             <div className="col-lg-7 text-center text-lg-left">

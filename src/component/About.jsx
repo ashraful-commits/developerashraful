@@ -1,4 +1,5 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const About = () => {
   return (
@@ -19,10 +20,10 @@ const About = () => {
           </div>
           <div className="row align-items-center">
             <div className="col-lg-5 pb-4 pb-lg-0">
-              <img
-                className="img-fluid rounded w-100"
+              <LazyLoadImage
+                alt="about"
+                className="img-fluid about rounded w-100"
                 src="img/about.jpg"
-                alt=""
               />
             </div>
             <div className="col-lg-7">

@@ -563,9 +563,12 @@ mark,
 
 .img-fluid {
   max-width: 100%;
-  height: 300px;
+  height: 350px;
   object-fit: cover;
   background-position: top;
+}
+.about {
+  height: auto;
 }
 .profile-fluid {
   max-width: 100%;
@@ -10358,6 +10361,8 @@ h6,
   border-radius: 4px;
   opacity: 0;
   transition: 0.5s;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio-item:hover .portfolio-btn {
@@ -10367,7 +10372,32 @@ h6,
   top: 30px;
   left: 30px;
 }
-
+.portfolio-item:hover .portfolio-btn .link {
+  color: white;
+  font-weight: bold;
+  opacity: 1;
+}
+.portfolio-item:hover .portfolio-btn p {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  opacity: 1;
+}
+.portfolio-item:hover .portfolio-btn .tools {
+  padding: 10px;
+}
+.portfolio-item:hover .portfolio-btn .tools span {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px;
+  opacity: 1;
+}
+.portfolio-item:hover .portfolio-btn .tools h5 {
+  color: white;
+  border-bottom: 1px solid white;
+  width: 100%;
+}
 .testimonial-carousel .owl-dots {
   margin-top: 25px;
   text-align: center;
