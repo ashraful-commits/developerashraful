@@ -11,13 +11,6 @@ const Footer = () => {
             <a
               target="blank"
               className="btn btn-light btn-social mr-2"
-              href="#"
-            >
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a
-              target="blank"
-              className="btn btn-light btn-social mr-2"
               href="https://www.facebook.com/beautyformind"
             >
               <i className="fab fa-facebook-f"></i>
@@ -29,7 +22,11 @@ const Footer = () => {
             >
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a target="blank" className="btn btn-light btn-social" href="#">
+            <a
+              target="blank"
+              className="btn btn-light btn-social"
+              href="https://www.instagram.com/ashrafulalam10000/"
+            >
               <i className="fab fa-instagram"></i>
             </a>
           </div>
