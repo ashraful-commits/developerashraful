@@ -11,6 +11,13 @@ const Footer = () => {
             <a
               target="blank"
               className="btn btn-light btn-social mr-2"
+              href="https://github.com/ashraful-commits/"
+            >
+              <i className="fab fa-github"></i>
+            </a>
+            <a
+              target="blank"
+              className="btn btn-light btn-social mr-2"
               href="https://www.facebook.com/beautyformind"
             >
               <i className="fab fa-facebook-f"></i>
