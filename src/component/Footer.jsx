@@ -49,16 +49,14 @@ const Footer = () => {
           </div>
           <p className="m-0">
             &copy;{" "}
-            <a className="text-white font-weight-bold" href="#">
-              Domain Name
-            </a>
-            . All Rights Reserved. Designed by{" "}
             <a
+              target="blank"
               className="text-white font-weight-bold"
-              href="https://htmlcodex.com"
+              href="https://developerashraful.netlify.app/"
             >
-              HTML Codex
+              developerashraful
             </a>
+            . All Rights Reserved
           </p>
         </div>
       </div>
