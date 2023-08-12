@@ -28,6 +28,7 @@ const Home = () => {
       <Contact />
       <Blog />
       <Footer />
+
       <Scroll />
     </>
   );

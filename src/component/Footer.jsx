@@ -1,5 +1,4 @@
-import React from "react";
-
+import ScrollToTop from "react-scroll-to-top";
 const Footer = () => {
   return (
     <>
@@ -7,6 +6,7 @@ const Footer = () => {
       {/* <!-- Footer Start --> */}
       <div className="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
         <div className="container text-center py-5">
+          <ScrollToTop smooth />
           <div className="d-flex justify-content-center mb-4">
             <a
               target="blank"
