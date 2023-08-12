@@ -93,7 +93,7 @@ const Hero = () => {
                   href="https://drive.google.com/file/d/1ZSbOgnEcws2X9yHL5C5WsXaDkMZRDfdb/view?usp=sharing"
                   className="btn btn-outline-light mr-5"
                 >
-                  Download CV
+                  Download Resume
                 </a>
                 <button
                   type="button"
