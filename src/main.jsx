@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "../public/css/style.min.css";
 import "./index.css";
 import "../public/lib/owlcarousel/assets/owl.carousel.min.css";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />

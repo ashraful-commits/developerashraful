@@ -90,7 +90,7 @@ const Hero = () => {
               <div className="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
                 <a
                   target="blank"
-                  href="https://drive.google.com/file/d/1QUTCVP0xGmUydP9k24ZsSOqncmAaHD_n/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1ZSbOgnEcws2X9yHL5C5WsXaDkMZRDfdb/view?usp=sharing"
                   className="btn btn-outline-light mr-5"
                 >
                   Download CV
