@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import { AnimatePresence, motion } from "framer-motion";
 const PortFolio = () => {
   const [selectedFilter, setSelectedFilter] = useState("All");
   const items = [
@@ -96,41 +96,54 @@ const PortFolio = () => {
               </ul>
             </div>
           </div>
-          <div className="row portfolio-container">
+          <motion.div className="row  portfolio-container">
             {filteredItems.length > 0 ? (
               filteredItems.map((item, index) => {
                 return (
-                  <div
-                    key={index}
-                    data-filter={item.filter}
-                    className="col-lg-4 col-md-6 mb-4 portfolio-item first"
-                  >
-                    <div className="position-relative overflow-hidden mb-2">
-                      <LazyLoadImage
-                        className="img-fluid rounded w-100"
-                        alt={item.title}
-                        src={item.img} // use normal  attributes as props
-                      />
-                      <div className="portfolio-btn bg-primary d-flex align-items-center justify-content-center ">
-                        <p className="title">{item.title}</p>
-                        <a href={item.img} data-lightbox="portfolio">
-                          <i
-                            className="fa fa-plus text-white"
-                            style={{ fontSize: "25px" }}
-                          ></i>
-                        </a>
-                        <a target="blank" className="link" href={item.live}>
-                          Live
-                        </a>
-                        <div className="tools">
-                          <h5>Tools:</h5>
-                          {item.tools.map((item, index) => {
-                            return <span key={index}>{item}, </span>;
-                          })}
+                  <AnimatePresence key={index} mode="popLayout">
+                    <motion.div
+                      initial={{
+                        opacity: 0,
+                        scale: 0.8,
+                      }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        opacity: { duration: 0.2 },
+                        type: "spring",
+                        bounce: 0.4,
+                      }}
+                      layout
+                      key={index}
+                      data-filter={item.filter}
+                      className="col-lg-4 col-md-6 mb-4 portfolio-item first"
+                    >
+                      <div className="position-relative overflow-hidden mb-2">
+                        <LazyLoadImage
+                          className="img-fluid rounded w-100"
+                          alt={item.title}
+                          src={item.img} // use normal  attributes as props
+                        />
+                        <div className="portfolio-btn bg-primary d-flex align-items-center justify-content-center ">
+                          <p className="title">{item.title}</p>
+                          <a href={item.img} data-lightbox="portfolio">
+                            <i
+                              className="fa fa-plus text-white"
+                              style={{ fontSize: "25px" }}
+                            ></i>
+                          </a>
+                          <a target="blank" className="link" href={item.live}>
+                            Live
+                          </a>
+                          <div className="tools">
+                            <h5>Tools:</h5>
+                            {item.tools.map((item, index) => {
+                              return <span key={index}>{item}, </span>;
+                            })}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                    </motion.div>
+                  </AnimatePresence>
                 );
               })
             ) : (
@@ -144,7 +157,7 @@ const PortFolio = () => {
                 <h4>No Items</h4>{" "}
               </div>
             )}
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* <!-- Portfolio End --> */}
